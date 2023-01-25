@@ -76,9 +76,9 @@ map = new mapboxgl.Map({
         minzoom: 0,
         filter: [
         'any',
-        ['==', 'BDYTYP', 1],
-        ['==', 'BDYTYP', 0],
-        ['==', 'BDYTYP', 2]
+        ['==', 'bdytyp', 1],
+        ['==', 'bdytyp', 0],
+        ['==', 'bdytyp', 2]
         ],
         paint: {
           'line-color': ['rgb', 77, 77, 77],
@@ -94,7 +94,7 @@ map = new mapboxgl.Map({
         minzoom: 0,
         filter: [
         'all',
-        ['==', 'BDYTYP', 3]
+        ['==', 'bdytyp', 3]
         ],
         paint: {
           'line-color': ['rgb', 77, 77, 77],
@@ -111,7 +111,7 @@ map = new mapboxgl.Map({
         minzoom: 0,
         filter: [
         'all',
-        ['==', 'BDYTYP', 4]
+        ['==', 'bdytyp', 4]
         ],
         paint: {
           'line-color': ['rgb', 77, 77, 77],
@@ -134,21 +134,21 @@ closeOnClick: false
 map.on('mousemove', 'bnda', function(e) {
 map.getCanvas().style.cursor = 'pointer';
 
-if(e.features[0].properties.STSCOD == 1 ){
+if(e.features[0].properties.stscod == 1 ){
   var html = "<p class='stscod1'>" + e.features[0].properties.LBL_EN.toUpperCase() + "</p>";
 
 popup
 .setLngLat(e.lngLat)
 .setHTML(html)
 .addTo(map)
-} else if (e.features[0].properties.STSCOD == 2){
+} else if (e.features[0].properties.stscod == 2){
   var html = "<p class='stscod2'>" + e.features[0].properties.LBL_EN.toUpperCase() + "</p>";
 
 popup
 .setLngLat(e.lngLat)
 .setHTML(html)
 .addTo(map)
-} else if (e.features[0].properties.STSCOD == 3){
+} else if (e.features[0].properties.stscod == 3){
 
 if(e.features[0].properties.LBL_EN == "Falkland Islands (Malvinas) ***"){
 
@@ -161,28 +161,28 @@ popup
 .setLngLat(e.lngLat)
 .setHTML(html)
 .addTo(map)
-} else if (e.features[0].properties.STSCOD == 4){
+} else if (e.features[0].properties.stscod == 4){
   var html = "<p class='stscod4'>" + e.features[0].properties.LBL_EN + "</p>";
 
 popup
 .setLngLat(e.lngLat)
 .setHTML(html)
 .addTo(map)
-} else if (e.features[0].properties.STSCOD == 5){
+} else if (e.features[0].properties.stscod == 5){
   var html = "<p class='stscod5'>" + e.features[0].properties.LBL_EN + "</p>";
 
 popup
 .setLngLat(e.lngLat)
 .setHTML(html)
 .addTo(map)
-} else if (e.features[0].properties.STSCOD == 6){
+} else if (e.features[0].properties.stscod == 6){
   var html = "<p class='stscod6'>" + e.features[0].properties.LBL_EN + "</p>";
 
 popup
 .setLngLat(e.lngLat)
 .setHTML(html)
 .addTo(map)
-} else if (e.features[0].properties.STSCOD == 99){
+} else if (e.features[0].properties.stscod == 99){
 
 if(e.features[0].properties.LBL_EN == "Jammu and Kashmir **"){
   var html = "<p class='stscod6'>" + e.features[0].properties.LBL_EN + "​</p>";
