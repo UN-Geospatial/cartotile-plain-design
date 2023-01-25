@@ -135,14 +135,14 @@ map.on('mousemove', 'bnda', function(e) {
 map.getCanvas().style.cursor = 'pointer';
 
 if(e.features[0].properties.stscod == 1 ){
-  var html = "<p class='stscod1'>" + e.features[0].properties.LBL_EN.toUpperCase() + "</p>";
+  var html = "<p class='stscod1'>" + e.features[0].properties.lbl_en.toUpperCase() + "</p>";
 
 popup
 .setLngLat(e.lngLat)
 .setHTML(html)
 .addTo(map)
 } else if (e.features[0].properties.stscod == 2){
-  var html = "<p class='stscod2'>" + e.features[0].properties.LBL_EN.toUpperCase() + "</p>";
+  var html = "<p class='stscod2'>" + e.features[0].properties.lbl_en.toUpperCase() + "</p>";
 
 popup
 .setLngLat(e.lngLat)
@@ -150,11 +150,11 @@ popup
 .addTo(map)
 } else if (e.features[0].properties.stscod == 3){
 
-if(e.features[0].properties.LBL_EN == "Falkland Islands (Malvinas) ***"){
+if(e.features[0].properties.lbl_en == "Falkland Islands (Malvinas) ***"){
 
-  var html = "<p class='stscod3'>" + e.features[0].properties.LBL_EN + "</p>";
+  var html = "<p class='stscod3'>" + e.features[0].properties.lbl_en + "</p>";
 } else {
-  var html = "<p class='stscod3'>" + e.features[0].properties.LBL_EN + "</p>";
+  var html = "<p class='stscod3'>" + e.features[0].properties.lbl_en + "</p>";
 }
 
 popup
@@ -162,21 +162,21 @@ popup
 .setHTML(html)
 .addTo(map)
 } else if (e.features[0].properties.stscod == 4){
-  var html = "<p class='stscod4'>" + e.features[0].properties.LBL_EN + "</p>";
+  var html = "<p class='stscod4'>" + e.features[0].properties.lbl_en + "</p>";
 
 popup
 .setLngLat(e.lngLat)
 .setHTML(html)
 .addTo(map)
 } else if (e.features[0].properties.stscod == 5){
-  var html = "<p class='stscod5'>" + e.features[0].properties.LBL_EN + "</p>";
+  var html = "<p class='stscod5'>" + e.features[0].properties.lbl_en + "</p>";
 
 popup
 .setLngLat(e.lngLat)
 .setHTML(html)
 .addTo(map)
 } else if (e.features[0].properties.stscod == 6){
-  var html = "<p class='stscod6'>" + e.features[0].properties.LBL_EN + "</p>";
+  var html = "<p class='stscod6'>" + e.features[0].properties.lbl_en + "</p>";
 
 popup
 .setLngLat(e.lngLat)
@@ -184,8 +184,8 @@ popup
 .addTo(map)
 } else if (e.features[0].properties.stscod == 99){
 
-if(e.features[0].properties.LBL_EN == "Jammu and Kashmir **"){
-  var html = "<p class='stscod6'>" + e.features[0].properties.LBL_EN + "​</p>";
+if(e.features[0].properties.lbl_en == "Jammu and Kashmir **"){
+  var html = "<p class='stscod6'>" + e.features[0].properties.lbl_en + "​</p>";
 
 popup
 .setLngLat(e.lngLat)
